@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Features](#features)
+- [Demo](#demo)
 - [Description](#description)
 - [Installation](#installation)
 - [Background](#background)
@@ -17,6 +18,10 @@ Taipy Chess is a chess app that allows you to see a variety of chess games, the 
 - See the most popular openings!
 - See the most successful openings!
 - Get to learn more about different players!
+
+## Demo
+
+![demo](assets/demo.mp4)
 
 ## Screenshots
 
