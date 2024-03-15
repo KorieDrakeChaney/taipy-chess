@@ -29,7 +29,7 @@ Taipy Chess is a chess app that allows you to see a variety of chess games, the 
 - Clone the repository:
 
   ```bash
-      git clone https://github.com/KorieDrakeChaney/taipy-chess.git && cd taipy-chess
+  git clone https://github.com/KorieDrakeChaney/taipy-chess.git && cd taipy-chess
   ```
 
 - Install the requirements:
