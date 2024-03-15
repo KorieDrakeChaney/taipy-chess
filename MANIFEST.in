@@ -1,4 +1,2 @@
-# Include all files relevant to the extension library
 include chess_library/front-end/dist/*
-include data/*
 
