@@ -72,4 +72,4 @@ Taipy Chess is a chess app that allows you to see a variety of chess games, the 
 
 ## Background
 
-I never done a Creator Quest before. I never even heard of it, until 2 days ago after reading this blog ![post](https://medium.com/@bap_16778/5-achievable-side-hustles-for-developers-946c7cad1ff2). I checked it out, and saw a live creator quest, to my surprise, it only had a couple days before it ended. I wanted to challenge myself to see if I can learn a new [technology](https://taipy.io) and build something with it in a couple days. I was able to do it, and I'm proud of myself. I hope you enjoy my project. :smile:
+I never done a Creator Quest before. I never even heard of it, until 2 days ago after reading this blog [post](https://medium.com/@bap_16778/5-achievable-side-hustles-for-developers-946c7cad1ff2). I checked it out, and saw a live creator quest, to my surprise, it only had a couple days before it ended. I wanted to challenge myself to see if I can learn a new [technology](https://taipy.io) and build something with it in a couple days. I was able to do it, and I'm proud of myself. I hope you enjoy my project. :smile:
