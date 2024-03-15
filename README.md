@@ -9,6 +9,8 @@
 
 ## Description
 
+Taipy Chess is a chess app that allows you to see a variety of chess games, the most popular openings, and the most successful openings. You can also get to learn more about different players. This app was built using the [Taipy](https://taipy.io) framework for easy data analysis and visualization.
+
 ## Features
 
 - See a variety of chess games!
