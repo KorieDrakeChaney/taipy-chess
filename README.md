@@ -20,8 +20,7 @@ Taipy Chess is a chess app that allows you to see a variety of chess games, the 
 - Get to learn more about different players!
 
 ## Demo
-
-![demo](assets/demo.mp4)
+https://github.com/KorieDrakeChaney/taipy-chess/blob/main/assets/demo.mp4
 
 ## Screenshots
 
