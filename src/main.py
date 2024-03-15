@@ -1,4 +1,4 @@
-from taipy.gui import Gui, Markdown
+from taipy.gui import Gui
 from chess_library import ChessLibrary
 
 from pages.root import root

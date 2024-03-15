@@ -73,7 +73,11 @@ const getVictoryMessage = (victoryStatus: string, winner: string) => {
         ? "White wins by resignation"
         : "Black wins by resignation";
     case "outoftime":
-      return winner == "white" ? "White wins on time" : "Black wins on time";
+      return winner == "draw"
+        ? "Draw, insufficient resources"
+        : winner == "white"
+        ? "White wins on time"
+        : "Black wins on time";
     case "draw":
       return "Draw";
     default:
