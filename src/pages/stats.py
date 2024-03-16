@@ -50,7 +50,7 @@ color_range_properties = {
     },
 }
 
-bins = [0, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800]
+bins = [0, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600]
 
 GAME_DATA['white_rating_range'] = pd.cut(GAME_DATA['white_rating'], bins, include_lowest=True)
 GAME_DATA['black_rating_range'] = pd.cut(GAME_DATA['black_rating'], bins, include_lowest=True)
@@ -65,7 +65,7 @@ white_win_percentages = (white_wins_by_rating_range / total_games_by_rating_rang
 black_win_percentages = (black_wins_by_rating_range / total_games_by_rating_range) * 100
 
 wins_by_rating_range= pd.DataFrame({
-    "Rating": ["0-1000", "1000-1200", "1200-1400", "1400-1600", "1600-1800", "1800-2000", "2000-2200", "2200-2400", "2400-2600", "2600-2800"],
+    "Rating": ["0-1000", "1000-1200", "1200-1400", "1400-1600", "1600-1800", "1800-2000", "2000-2200", "2200-2400", "2400-2600"],
     "White": white_win_percentages,
     "Black": black_win_percentages,
     "Draw": (draws_by_rating_range / total_games_by_rating_range) * 100
