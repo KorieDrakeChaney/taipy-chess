@@ -18,6 +18,7 @@ Taipy Chess is a chess app that allows you to see a variety of chess games, the 
 - See the most popular openings!
 - See the chess board heatmap!
 - See the most successful openings!
+- See the chessboard heatmap!
 - Get to learn more about different players!
 
 ## Demo
