@@ -4,8 +4,7 @@ from data.data import OPENING_DATA, GAME_DATA
 
 CHESSBOARD_DATA = ""
 
-
-df_opening_by_wins = GAME_DATA.groupby("opening_name")["winner"].value_counts().unstack().fillna(0)
+df_opening_by_wins = GAME_DATA.groupby("opening_name", observed=True)["winner"].value_counts().unstack().fillna(0)
 df_opening_by_wins['total_wins'] = df_opening_by_wins['white'] + df_opening_by_wins['black']
 df_opening_by_wins = df_opening_by_wins.sort_values('total_wins', ascending=False).reset_index()
 

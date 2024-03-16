@@ -55,9 +55,9 @@ bins = [0, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800]
 GAME_DATA['white_rating_range'] = pd.cut(GAME_DATA['white_rating'], bins, include_lowest=True)
 GAME_DATA['black_rating_range'] = pd.cut(GAME_DATA['black_rating'], bins, include_lowest=True)
 
-white_wins_by_rating_range = GAME_DATA[GAME_DATA['winner'] == 'white'].groupby(GAME_DATA['white_rating_range']).size()
-black_wins_by_rating_range = GAME_DATA[GAME_DATA['winner'] == 'black'].groupby(GAME_DATA['black_rating_range']).size()
-draws_by_rating_range = GAME_DATA[GAME_DATA['winner'] == 'draw'].groupby(GAME_DATA['black_rating_range']).size()
+white_wins_by_rating_range = GAME_DATA[GAME_DATA['winner'] == 'white'].groupby(GAME_DATA['white_rating_range'], observed=True).size()
+black_wins_by_rating_range = GAME_DATA[GAME_DATA['winner'] == 'black'].groupby(GAME_DATA['black_rating_range'], observed=True).size()
+draws_by_rating_range = GAME_DATA[GAME_DATA['winner'] == 'draw'].groupby(GAME_DATA['black_rating_range'], observed=True).size()
 
 total_games_by_rating_range = white_wins_by_rating_range + black_wins_by_rating_range + draws_by_rating_range
 

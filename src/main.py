@@ -14,4 +14,4 @@ pages = {
 }
 
 if __name__ == "__main__":
-    Gui(pages=pages, libraries=[ChessLibrary()]).run(title="Taipy Chess!", use_reloader=True, dark_mode=True, debug=False)
+    Gui(pages=pages, libraries=[ChessLibrary()]).run(title="Taipy Chess!", dark_mode=True)
