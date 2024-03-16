@@ -92,6 +92,34 @@ def get_heatmap_data():
 
     return heatmap_data
 
+
+def get_first_move_data():
+    """
+    Get first move data
+
+    Returns:
+    list: The first move data
+    """
+
+    first_move_data = [[0 for _ in range(8)] for _ in range(8)]
+
+    for _, row in GAME_DATA.iterrows():
+        moves = row['moves'].split(" ")
+        white_move = moves[0]
+        white_square = get_square(white_move)
+        first_move_data[white_square[1]][white_square[0]] += 1
+        if len(moves) < 2:
+            continue
+        
+        black_move = moves[1]
+        black_square = get_square(black_move)
+        first_move_data[black_square[1]][black_square[0]] += 1
+
+    return first_move_data
+
 if __name__ == "__main__":
-    with open('output.txt', 'w') as f:
+    with open('board_heatmap_data.txt', 'w') as f:
         f.write(str(get_heatmap_data()))
+    
+    with open('first_move_data.txt', 'w') as f:
+        f.write(str(get_first_move_data()))
