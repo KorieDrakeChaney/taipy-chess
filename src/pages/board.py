@@ -12,17 +12,17 @@ data = pd.DataFrame({
             [5221, 10305, 11607, 23388, 24844, 12535, 12867, 6571], 
             [4857, 7322, 9908, 14454, 13997, 10247, 6421, 5855]
             ],
-    "Ranks": ["1", "2", "3", "4", "5", "6", "7", "8"],
-    "Files": ["a", "b", "c", "d", "e", "f", "g", "h"]
+    "Files": ["1", "2", "3", "4", "5", "6", "7", "8"],
+    "Ranks": ["a", "b", "c", "d", "e", "f", "g", "h"]
 })
 
 layout = {
     "title": "Heatmap of Chessboard",
     "xaxis": {
-        "title": "File",
+        "title": "Ranks",
     },
     "yaxis": {
-        "title": "Ranak",
+        "title": "Files",
     },
     "plot_config" : {
         "editable" : False,
