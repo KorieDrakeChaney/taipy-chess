@@ -16,20 +16,19 @@ Taipy Chess is a chess app that allows you to see a variety of chess games, the 
 
 - See a variety of chess games!
 - See the most popular openings!
+- See the chess board heatmap!
 - See the most successful openings!
 - Get to learn more about different players!
 
 ## Demo
 
-
 https://github.com/KorieDrakeChaney/taipy-chess/assets/92071726/864786a2-0039-4222-ac43-cd064ecfa950
-
 
 ## Screenshots
 
-| ![games](assets/games.png)              | ![openings](assets/openings.png)   | ![stats](assets/stats.png)        |
-| --------------------------------------- | ---------------------------------- | --------------------------------- |
-| **Check out a variety of chess games!** | **See the most popular openings!** | **Get to learn more about chess** |
+| ![games](assets/games.png)              | ![openings](assets/openings.png)   | ![stats](assets/stats.png)        | ![chessboard_heatmap](assets/chessboard_heatmap.png) |
+| --------------------------------------- | ---------------------------------- | --------------------------------- | ---------------------------------------------------- |
+| **Check out a variety of chess games!** | **See the most popular openings!** | **Get to learn more about chess** | **See the chessboard heatmap!**                      |
 
 ## Installation
 
