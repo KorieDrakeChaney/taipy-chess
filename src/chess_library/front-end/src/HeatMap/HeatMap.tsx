@@ -171,13 +171,9 @@ const HeatmapBar = ({ min, max }: HeatmapBarProps) => {
         <div
           key={i}
           style={{
-            position: "absolute",
-            marginLeft: "2.5px",
             bottom: `${i * 10 - 3.5}%`,
-            left: "10px",
-            height: "10%",
-            fontSize: "15px",
           }}
+          className={styles.heatmapBarText}
         >
           {i * 10}
         </div>
@@ -244,18 +240,10 @@ const HeatMap = (props: HeatMapProps) => {
                     border: "1px solid black",
                   }}
                 >
-                  <div
-                    style={{
-                      zIndex: 1,
-                      color: "rgba(252, 243, 73,1)",
-                      fontWeight: "bold",
-                      marginLeft: "auto",
-                    }}
-                  >
-                    {((isFirstMoveData && index >= 16 && index < 48) ||
-                      !isFirstMoveData) &&
-                      square}
-                  </div>
+                  {((isFirstMoveData && index >= 16 && index < 48) ||
+                    !isFirstMoveData) && (
+                    <div className={styles.square}>{square}</div>
+                  )}
                 </div>
               );
             })}

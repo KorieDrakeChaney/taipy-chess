@@ -40,17 +40,20 @@
   padding: 10px;
 }
 
-.square-dark {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.square {
+  z-index: 1;
+  color: rgba(252, 243, 73, 1);
+  font-weight: bold;
+  margin-left: auto;
+  font-size: 10px;
 }
 
-.square-light {
+.heatmapBarText {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  color: #000000;
+  margin-left: 2.5px;
+  left: 10px;
+  height: 10%;
+  font-size: 15px;
 }
 
 @media (max-width: 700px) {
@@ -60,6 +63,14 @@
 }
 
 @media (max-width: 500px) {
+  .square {
+    font-size: 8px;
+  }
+
+  .heatmapBarText {
+    font-size: 12px;
+  }
+
   .board {
     height: 280px;
   }
@@ -78,6 +89,10 @@
 @media (max-width: 350px) {
   .board {
     height: 200px;
+  }
+
+  .heatmapBarText {
+    font-size: 10px;
   }
 
   .container {
