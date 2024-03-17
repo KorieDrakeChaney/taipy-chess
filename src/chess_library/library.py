@@ -7,8 +7,12 @@ class ChessLibrary(ElementLibrary):
                 "data", 
                  {"data": ElementProperty(PropertyType.dynamic_string)},
                 react_component="ChessBoard",
+            ),
+            "heatmap": Element(
+                "data", 
+                 {"data": ElementProperty(PropertyType.dynamic_string)},
+                react_component="HeatMap",
             )
-
         }
 
     def get_name(self) -> str:

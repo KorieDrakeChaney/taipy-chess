@@ -1,0 +1,100 @@
+.board {
+  width: fit-content;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: rgba(0, 0, 0, 0.25) 1px solid;
+  border-radius: 5%;
+  width: 625px;
+  height: fit-content;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+}
+
+.square-dark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.square-light {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #000000;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .board {
+    height: 280px;
+  }
+
+  .container {
+    width: 350px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(8, 35px);
+    grid-template-rows: repeat(8, 35px);
+  }
+}
+
+@media (max-width: 350px) {
+  .board {
+    height: 200px;
+  }
+
+  .container {
+    width: 250px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(8, 25px);
+    grid-template-rows: repeat(8, 25px);
+  }
+
+  .opening_name {
+    font-size: medium;
+  }
+
+  .players {
+    display: none;
+  }
+}
