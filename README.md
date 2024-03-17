@@ -1,4 +1,4 @@
-# [Taipy Chess]([https://quine.sh/repo/KorieDrakeChaney-taipy-chess-772526368](https://quine.sh/repo/KorieDrakeChaney-taipy-chess-772526368?utm_source=copy&utm_share_context=rdp))
+# [Taipy Chess](https://quine.sh/repo/KorieDrakeChaney-taipy-chess-772526368](https://quine.sh/repo/KorieDrakeChaney-taipy-chess-772526368?utm_source=copy&utm_share_context=rdp)
 
 ## Table of Contents
 
