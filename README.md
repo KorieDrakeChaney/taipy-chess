@@ -27,9 +27,15 @@ https://github.com/KorieDrakeChaney/taipy-chess/assets/92071726/91a750ae-8ea2-43
 
 ## Screenshots
 
-| ![games](assets/games.png)              | ![openings](assets/openings.png)   | ![stats](assets/stats.png)        | ![chessboard_heatmap](assets/chessboard_heatmap.png) |
-| --------------------------------------- | ---------------------------------- | --------------------------------- | ---------------------------------------------------- |
-| **Check out a variety of chess games!** | **See the most popular openings!** | **Get to learn more about chess** | **See the chessboard heatmap!**                      |
+| ![games](assets/games.png)              | ![openings](assets/openings.png)   | ![stats](assets/stats.png)        |
+| --------------------------------------- | ---------------------------------- | --------------------------------- |
+| **Check out a variety of chess games!** | **See the most popular openings!** | **Get to learn more about chess** |
+
+## Heatmaps
+
+| ![total_moves](assets/total_moves.png) | ![pawn_moves](assets/pawn_first_moves.png)  | ![knight_moves](assets/knght_first_moves.png) |
+| -------------------------------------- | ------------------------------------------- | --------------------------------------------- |
+| **Check out the total move heatmap**   | **Check out the first moves made by pawns** | **Check out the first moves made by knights** |
 
 ## Installation
 
