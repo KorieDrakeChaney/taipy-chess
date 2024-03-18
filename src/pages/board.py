@@ -6,20 +6,4 @@ BOARD_DATA = "4857,7322,9908,14454,13997,10247,19447,5855,5221,10305,11607,23388
 FIRST_PAWN_MOVE_DATA = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,286,734,543,2083,41,387,19,23,25,2881,3667,6988,166,18,24,28,88,716,4522,12596,166,38,33,27,173,56,131,416,23,186,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,First Pawn Move HeatMap"
 FIRST_KNIGHT_MOVE_DATA = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,392,0,0,1693,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,99,0,0,725,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,First Knight Move HeatMap"
 
-layout = {
-    "title": "Heatmap of Chessboard",
-    "xaxis": {
-        "title": "Ranks",
-    },
-    "yaxis": {
-        "title": "Files",
-    },
-    "plot_config" : {
-        "editable" : False,
-        "scrollZoom": False,
-        "displayModeBar": False,
-    },
-}
-
-
 board = Markdown("src/pages/board.md")
