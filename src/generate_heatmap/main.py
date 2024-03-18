@@ -65,7 +65,7 @@ def get_square(move):
         move = move[-2:]
 
     file_number = get_file_number(move[0])
-    rank = int(move[1]) - 1
+    rank = 8 - int(move[1])
 
     return [file_number, rank]
 
@@ -158,6 +158,7 @@ def get_first_move_data_by_piece(piece):
         white_square = get_square(white_move)
         if get_piece_from_move(white_move) == piece:
             first_move_data[white_square[1]][white_square[0]] += 1
+
         if len(moves) < 2:
             continue
         

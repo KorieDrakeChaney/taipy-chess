@@ -151,7 +151,18 @@ interface HeatmapBarProps {
   max: number;
 }
 
+const getThousands = (n: number): number => {
+  if (n >= 100000) {
+    return 10000;
+  }
+  if (n >= 10000) {
+    return 1000;
+  }
+  return 100;
+};
+
 const HeatmapBar = ({ min, max }: HeatmapBarProps) => {
+  let max_ceil = getThousands(max);
   return (
     <div style={{ position: "relative", height: "100%", marginLeft: "10px" }}>
       <div
@@ -167,17 +178,23 @@ const HeatmapBar = ({ min, max }: HeatmapBarProps) => {
           )}, ${getColor(100)})`,
         }}
       />
-      {Array.from({ length: 10 }).map((_, i) => (
-        <div
-          key={i}
-          style={{
-            bottom: `${i * 10 - 3.5}%`,
-          }}
-          className={styles.heatmapBarText}
-        >
-          {i * 10}
-        </div>
-      ))}
+      {Array.from({ length: 10 }).map((_, i) => {
+        let value =
+          Math.ceil(((max - min) * (i / 10) + min) / max_ceil) * max_ceil;
+        return (
+          <div
+            key={i}
+            style={{
+              bottom: `${i * 10 - 3.5}%`,
+            }}
+            className={styles.heatmapBarText}
+          >
+            {`${max_ceil >= 1000 ? value / 1000 : value}${
+              getThousands(max) > 100 && value != 0 ? "k" : ""
+            }`}
+          </div>
+        );
+      })}
     </div>
   );
 };
@@ -206,8 +223,10 @@ const HeatMap = (props: HeatMapProps) => {
         else setTitle(n);
       });
 
-      setMax(Math.max(...numbers));
-      setMin(Math.min(...numbers));
+      const max = Math.max(...numbers);
+      const min = Math.min(...numbers);
+
+      console.log(max);
 
       setDegrees(
         numbers.map((n) => {
@@ -215,8 +234,11 @@ const HeatMap = (props: HeatMapProps) => {
           return percent;
         })
       );
+
+      setMax(max);
+      setMin(min);
     }
-  });
+  }, [data]);
 
   return (
     <div className={styles.panel}>
