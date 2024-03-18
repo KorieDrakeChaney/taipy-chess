@@ -23,7 +23,10 @@ Taipy-Chess, is a chess visualization tool, based on 20,000 games. You can see a
 
 ## Demo
 
-https://github.com/KorieDrakeChaney/taipy-chess/assets/92071726/91a750ae-8ea2-4362-8efa-1e47227eb5fc
+
+https://github.com/KorieDrakeChaney/taipy-chess/assets/92071726/c25fb773-124c-4836-bf0a-8bd80b2d5d14
+
+
 
 ## Screenshots
 
