@@ -36,7 +36,7 @@ def get_file_number(column):
         case _:
             return -1
 
-def get_square(move):
+def get_square(move, color):
     """
     Get the square of the move
 
@@ -47,12 +47,10 @@ def get_square(move):
     list: The square
     """
 
-    color = "w" if move[0] == move[0].upper() else "b"
-
     if "O-O" in move:
-        return [6, 0, 5, 0] if color == "w" else [6, 7, 5, 7]
+        return [6, 0, 5, 0] if color == "b" else [6, 7, 5, 7]
     elif "O-O-O" in move:
-        return [2, 0, 3, 0] if color == "w" else [2, 7, 3, 7]
+        return [2, 0, 3, 0] if color == "b" else [2, 7, 3, 7]
 
     if "=" in move:
         if "x" in move:
@@ -84,38 +82,14 @@ def get_heatmap_data():
 
     for _, row in GAME_DATA.iterrows():
         moves = row['moves'].split(" ")
-        for move in moves:
-            square = get_square(move)
+        for index, move in enumerate(moves):
+            square = get_square(move, "w" if index % 2 == 0 else "b")
             heatmap_data[square[1]][square[0]] += 1
             if len(square) > 2:
                 heatmap_data[square[2]][square[3]] += 1
 
     return heatmap_data
 
-
-def get_first_move_data():
-    """
-    Get first move data
-
-    Returns:
-    list: The first move data
-    """
-
-    first_move_data = [[0 for _ in range(8)] for _ in range(8)]
-
-    for _, row in GAME_DATA.iterrows():
-        moves = row['moves'].split(" ")
-        white_move = moves[0]
-        white_square = get_square(white_move)
-        first_move_data[white_square[1]][white_square[0]] += 1
-        if len(moves) < 2:
-            continue
-        
-        black_move = moves[1]
-        black_square = get_square(black_move)
-        first_move_data[black_square[1]][black_square[0]] += 1
-
-    return first_move_data
 
 def get_piece_from_move(move):
     """
@@ -155,7 +129,7 @@ def get_first_move_data_by_piece(piece):
     for _, row in GAME_DATA.iterrows():
         moves = row['moves'].split(" ")
         white_move = moves[0]
-        white_square = get_square(white_move)
+        white_square = get_square(white_move, "w")
         if get_piece_from_move(white_move) == piece:
             first_move_data[white_square[1]][white_square[0]] += 1
 
@@ -163,7 +137,7 @@ def get_first_move_data_by_piece(piece):
             continue
         
         black_move = moves[1]
-        black_square = get_square(black_move)
+        black_square = get_square(black_move, "b")
         if get_piece_from_move(black_move) == piece:
             first_move_data[black_square[1]][black_square[0]] += 1
 
@@ -171,9 +145,6 @@ def get_first_move_data_by_piece(piece):
 if __name__ == "__main__":
     with open('board_heatmap_data.txt', 'w') as f:
         f.write(str(get_heatmap_data()))
-    
-    with open('first_move_data.txt', 'w') as f:
-        f.write(str(get_first_move_data()))
     
     with open('first_pawn_move_data.txt', 'w') as f:
         f.write(str(get_first_move_data_by_piece("P")))
