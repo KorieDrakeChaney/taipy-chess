@@ -33,7 +33,7 @@ https://github.com/KorieDrakeChaney/taipy-chess/assets/92071726/91a750ae-8ea2-43
 
 ## Heatmaps
 
-| ![total_moves](assets/total_moves.png) | ![pawn_moves](assets/pawn_first_moves.png)  | ![knight_moves](assets/knght_first_moves.png) |
+| ![total_moves](assets/total_moves.png) | ![pawn_moves](assets/pawn_first_moves.png)  | ![knight_moves](assets/knight_first_moves.png) |
 | -------------------------------------- | ------------------------------------------- | --------------------------------------------- |
 | **Check out the total move heatmap**   | **Check out the first moves made by pawns** | **Check out the first moves made by knights** |
 
