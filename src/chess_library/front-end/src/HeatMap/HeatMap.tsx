@@ -3,122 +3,11 @@ import styles from "./HeatMap.module.css";
 import { useEffect, useState } from "react";
 import ChessPiece, { ChessPieceProps } from "../ChessPiece/ChessPiece";
 import { Color, PieceSymbol } from "chess.js";
-import { getBoardFromFen } from "../utils";
-
-const squares = [
-  "a8",
-  "b8",
-  "c8",
-  "d8",
-  "e8",
-  "f8",
-  "g8",
-  "h8",
-  "a7",
-  "b7",
-  "c7",
-  "d7",
-  "e7",
-  "f7",
-  "g7",
-  "h7",
-  "a6",
-  "b6",
-  "c6",
-  "d6",
-  "e6",
-  "f6",
-  "g6",
-  "h6",
-  "a5",
-  "b5",
-  "c5",
-  "d5",
-  "e5",
-  "f5",
-  "g5",
-  "h5",
-  "a4",
-  "b4",
-  "c4",
-  "d4",
-  "e4",
-  "f4",
-  "g4",
-  "h4",
-  "a3",
-  "b3",
-  "c3",
-  "d3",
-  "e3",
-  "f3",
-  "g3",
-  "h3",
-  "a2",
-  "b2",
-  "c2",
-  "d2",
-  "e2",
-  "f2",
-  "g2",
-  "h2",
-  "a1",
-  "b1",
-  "c1",
-  "d1",
-  "e1",
-  "f1",
-  "g1",
-  "h1",
-];
-
-const DegreeColors = [
-  [255, 41, 87], // min
-  [95, 23, 252], // mid
-  [28, 255, 126], // end
-];
-
-const getIndexOfSquare = (square: string) => {
-  return squares.indexOf(square);
-};
-
-const getPieceOnIndex = (index: number) => {
-  return squares[index];
-};
+import { getBoardFromFen, getPieceOnIndex } from "../utils";
 
 type PieceData = {
   color: Color;
   piece: PieceSymbol;
-};
-
-const getPieceOnSquare = (square: string): PieceData => {
-  switch (square) {
-    case "f3":
-      return {
-        color: "w",
-        piece: "n",
-      };
-    case "c3":
-      return {
-        color: "w",
-        piece: "n",
-      };
-    case "f6":
-      return {
-        color: "b",
-        piece: "n",
-      };
-    case "c6":
-      return {
-        color: "b",
-        piece: "n",
-      };
-    default:
-      return {
-        color: getIndexOfSquare(square) < 32 ? "b" : "w",
-        piece: "p",
-      };
-  }
 };
 
 const getBracketFromDegree = (degree: number) => {
@@ -179,8 +68,7 @@ const HeatmapBar = ({ min, max }: HeatmapBarProps) => {
         }}
       />
       {Array.from({ length: 10 }).map((_, i) => {
-        let value =
-          Math.ceil(((max - min) * (i / 10) + min) / max_ceil) * max_ceil;
+        let value = Math.ceil(i / max) * max_ceil;
         return (
           <div
             key={i}
